@@ -22,7 +22,7 @@ header h2 {
 
 .jumbotron {
     color: white;
-    background-image: url("https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_1440/v1681914685/DigitalCreative/2023/Campaigns/wk17-4-20/Homepage/BPS/Homepage-Main-Camping.png");
+    background-image: url('img/main-camping.jpg');
     background-size: cover;
     padding: 200px 0;
 }
