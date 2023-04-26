@@ -1,40 +1,45 @@
 body {
     font-family: "Open Sans", sans-serif;
-    background: #111;
+    background: #393c1c;
+    color: #ffffff;
 }
 
 h1, h2, h3 {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:"Open Sans", sans-serif;
+    color: #b7ca9f;
 }
 
 h2 {
-    color: #d1c40c;
+    color: #b7ca9f;
 }
 
+hr {color: #b7ca9f;}
+
+
 header h2 {
-    color: #444259;
+    color: #ffffff;
 }
 
 .site-footer {
-    background-image: linear-gradient(#CEC8FF, white);
-    padding: 20px 0;
+    background-color: #1d1e19;
+    padding: 80px 0;
 }
 
 .jumbotron {
+    margin: 0;
     color: white;
-    background-image: url('img/main-camping.jpg');
+    background-image: url('https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_1440/v1681914685/DigitalCreative/2023/Campaigns/wk17-4-20/Homepage/BPS/Homepage-Main-Camping.png');
     background-size: cover;
-    padding: 200px 0;
+    padding: 20px 0 360px 0;
 }
 
 .row-content {
     padding: 50px 0;
-    border-bottom: 1px ridge;
     min-height: 200px;
 }
 
 .navbar {
-    background-color: #444;
+    background-color: #626723;
 }
 
 .tab-content {
@@ -44,9 +49,13 @@ header h2 {
 }
 
 a, a:hover {
-    color: inherit;
+    color:#b7ca9f;
     text-decoration: none;
   }
+
+.btn-link {    
+    color:#b7ca9f;
+} 
 
 .carousel-caption {
     background-color: rgba(0, 0, 0, 0.5);
@@ -54,4 +63,16 @@ a, a:hover {
 
 .carousel {
     border: solid #5637DD;
+}
+
+.card {
+    border: 0;
+    box-shadow: 0px 4px 200px 0px rgba(0, 0, 0, 0.75);
+}
+
+.img-thumbnail {
+    background-color:#626723;
+    border: 1px solid #a6af7e;
+    border-radius: 0;
+    box-shadow: 0px 4px 200px 0px rgba(0, 0, 0, 0.75);
 }
