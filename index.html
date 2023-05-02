@@ -19,7 +19,8 @@
 </head>
 
 <body>
-
+    
+    <!-- Jumbotron -->
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
@@ -30,6 +31,7 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
+                <!-- Reserve a Campsite button -->
                 <div class="col-md-4 col-xl-2 mt-4">
                     <a role="button" class="btn btn-lg btn-info text-nowrap" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
                 </div>                
@@ -37,6 +39,7 @@
         </div>
     </header>
 
+    <!-- Reserve a Campsite Modal -->
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -97,7 +100,7 @@
         </div>
     </div>    
 
-
+    <!-- Nav bar -->
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
@@ -111,6 +114,7 @@
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
                 </ul>
+                <!-- Login button -->
                 <span class="navbar-text ml-auto">
                     <a role="button" data-toggle="modal" data-target="#loginModal">
                         <i class="fa fa-sign-in"></i> Login
@@ -120,6 +124,7 @@
         </div>
     </nav>
 
+    <!-- Login modal -->
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -157,7 +162,10 @@
         </div>
     </div>    
 
+    <!-- Main container -->
     <div class="container">
+
+        <!-- Carousel row -->
         <div class="row row-content">
             <div class="col-md-8 mx-auto">
                 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -188,11 +196,15 @@
                     <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
-                    </a>                                           
+                    </a>
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <i class="fa fa-pause"></i>
+                    </button>
                 </div>
             </div>
         </div>
 
+        <!-- Discover & Review row -->
         <div class="row row-content align-items-center">
             <div class="col-sm-4 order-sm-last col-md-3">
                 <h2 class="text-sm-right">Discover & Review</h2>
@@ -208,6 +220,7 @@
             </div>
         </div>
 
+        <!-- Featured Campsites row -->
         <div class="row row-content align-items-center">
             <div class="col-sm-4 col-md-3">
                 <h2>Featured Campsites</h2>
@@ -223,6 +236,7 @@
             </div>
         </div>
 
+        <!-- Our Community Partners row -->
         <div class="row row-content align-items-center">
             <div class="col-sm-4 order-sm-last col-md-3">
                 <h2 class="text-sm-right">Our Community Partners</h2>
@@ -240,6 +254,7 @@
 
     </div><!-- CLOSE main container -->
 
+    <!-- Foooter -->
     <footer class="site-footer">
         <div class="container">
             <div class="row">
@@ -273,10 +288,21 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>    
+        $(function() {
+            $(".carousel").carousel( { interval: 2000 } );
+            $("#carouselButton").click(function(){
+                if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+                    $(".carousel").carousel("pause");
+                    $("#carouselButton").children("i").removeClass("fa-pause");
+                    $("#carouselButton").children("i").addClass("fa-play");
+                } else {
+                    $(".carousel").carousel("cycle");
+                    $("#carouselButton").children("i").removeClass("fa-play");
+                    $("#carouselButton").children("i").addClass("fa-pause"); 
+                }
+            });
+        });
+    </script>
 
 </body>
 
